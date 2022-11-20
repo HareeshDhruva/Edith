@@ -35,6 +35,8 @@ def ReplyBrain(question,chat_log = None):
     File_log.write(chat_log_template_update)
     File_log.close()
     return answer
-while True:
+
+
+"""while True:
     kk = input ("Enter : ")
-    print(ReplyBrain(kk))
+    print(ReplyBrain(kk))"""
