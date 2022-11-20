@@ -5,7 +5,7 @@ from Body.speaker import speak
 from Features.Clap import Tester
 
 def MainExecution():
-    speak("Hello boos how can i help you")
+    speak("Hello boss how can i help you")
     while True:
         data = MicExecution()
         data = str(data)
