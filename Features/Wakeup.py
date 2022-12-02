@@ -1,5 +1,7 @@
 import speech_recognition as sr
 
+from Body.speaker import speak
+
 def Listen():
 
     r = sr.Recognizer()
@@ -21,15 +23,16 @@ def Listen():
     return query
 
 def WakeupDetected():
-
+    
+    print("verify voice lock")
+    speak("verify voice lock")
     while True:
 
         sound = Listen().lower()
 
-        if "wake up" in sound:
+        if "123" in sound:
+            speak("Device unlocked")
             return "True-Mic"
         
         else:
             pass
-        
-WakeupDetected()

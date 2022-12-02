@@ -1,8 +1,7 @@
 from Brain.AIbrain import ReplyBrain
 from Body.Listener import MicExecution
-print("Edith starting please wait")
+from Features.Wakeup import WakeupDetected
 from Body.speaker import speak
-from Features.Clap import Tester
 
 def MainExecution():
     speak("Hello boss how can i help you")
@@ -12,15 +11,14 @@ def MainExecution():
         reply = ReplyBrain(data)
         speak(reply)
         
-def ClapDetect():
-    query = Tester()
+def unlock():
+    query = WakeupDetected()
     if "True-Mic" in query:
         print("")
-        print("Clap Detect")
+        print("Edith ready")
         print("")
         MainExecution()
     else:
         pass
     
-    
-ClapDetect()
+unlock()
